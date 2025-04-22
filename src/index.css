@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import "tailwindcss";
+
+@layer {
+  .link {
+    @apply hover:underline cursor-pointer;
+  }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* * {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), auto !important;
+}
+
+.link {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur116.cur), pointer !important;
+} */
