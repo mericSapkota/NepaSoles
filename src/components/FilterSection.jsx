@@ -34,15 +34,14 @@ const FilterSection = ({ onFilterChange, filter, setFilter }) => {
 
   return (
     <div
-      className={` duration-200 ease-in absolute -top-10 z-10 h-screen w-[102%]  md:w-[400px] md:static bg-white p-5 md:p-2 ${
-        filter ? "visible translate-y-0" : "invisible md:hidden translate-y-full "
-      }`}
+      className={` duration-250 ease-in-out bg-white absolute -top-10 z-10 h-screen w-full  md:w-[400px]  md:static md:p-2 ${
+        filter ? "visible   opacity-100 " : " md:invisible opacity-0  max-w-0 "
+      } `}
     >
       <div className="flex justify-between items-center">
         <p>Filter</p>
         <div className="flex items-center gap-2">
           <div className=" text-sm px-2 py-1 link" onClick={clearSearch}>
-            {" "}
             Clear
           </div>
           <XMarkIcon

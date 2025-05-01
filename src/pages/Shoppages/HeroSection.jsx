@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { calculateDiscount } from "../../components/util";
 
 const HeroSection = () => {
-  const [filter, setFilter] = useState(false);
+  const [filter, setFilter] = useState(true);
   const [sort, setSort] = useState("featured");
   const [brands, setBrands] = useState([]);
   const navigate = useNavigate();
+
+  console.log(filter);
 
   let shoesInfo = [
     {
@@ -94,7 +96,7 @@ const HeroSection = () => {
   return (
     <div className="relative">
       <div className="p-5 md:p-10">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between pr-2">
           <p className="text-gray-500">Results found:{shoes.length}</p>
           <div
             onClick={() => {
@@ -117,7 +119,7 @@ const HeroSection = () => {
           />
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 py-5">
             {shoes.map((info, index) => (
-              <div key={index} className="relative" onClick={() => goToShoePage(info.id)}>
+              <div key={index} className="relative cursor-pointer" onClick={() => goToShoePage(info.id)}>
                 <img src={`/outlinkshoes/${info.image}`} className=" " />
                 {info.discount != 0 && (
                   <div className="h-10 p-4 text-xs w-10 bg-red-400 text-white rounded-full absolute top-0 right-0 flex flex-col  items-center justify-center">
