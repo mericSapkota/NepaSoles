@@ -35,7 +35,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-black sticky z-50 top-0 px-5 flex items-center justify-between ">
+    <div className="bg-black sticky z-10 top-0 px-5 flex items-center justify-between ">
       <Sidebar
         goToHomePage={goToHomePage}
         goToShopPage={goToShopPage}
